@@ -1,0 +1,800 @@
+
+
+/* Style pour le startup boot de la ds */
+.ds-boot-sequence {
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P", monospace;
+}
+
+
+.nintendo-logo {
+    font-size: 2em;
+    color: #ff0000;
+    margin-bottom: 2em;
+    animation: fadeIn 1s ease-in;
+}
+
+.health-warning {
+    font-size: 0.8em;
+    text-align: center;
+    color: #000;
+    margin: 1em;
+    animation: fadeIn 2s ease-in;
+}
+
+.boot-loading {
+    width: 80%;
+    height: 10px;
+    background: #eee;
+    margin-top: 2em;
+}
+
+.boot-bar {
+    height: 100%;
+    width: 0;
+    background-color: #ff0000;
+    animation: bootProgress 2s ease-in-out forwards;
+}
+
+
+
+@keyframes dsOpeningAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.sm-mg-top {
+    margin-top: 20px;
+}
+
+.sm-mg-bot {
+    margin-bottom: 10px;
+}
+
+@keyframes topScreenOpen {
+    0% {
+        transform: rotateX(-90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes bootProgress {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Optional: Add DS opening animation */
+
+
+.nintendo-logo-image {
+    width: 20vw;
+}
+
+
+/* Style général pour la Nintendo et le carrousel */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #2a2a2a !important;
+    color: white;
+    height: 100vh;
+}
+
+/* Style des écrans de la Nintendo 3DS */
+.screen {
+    width: 90%;
+    min-width: 200px;
+    border: 5px solid #333;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-self: center;
+}
+
+.top-screen {
+    height: 48vh;
+    width: 86%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1px;
+    padding: 20px 50px;
+    border-radius: 19px;
+    transform-origin: bottom;
+    animation: topScreenOpen 2s ease;
+    animation: dsOpeningAnimation 2s ease-out forwards;
+}
+
+.bottom-screen {
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    border-radius: 19px;
+    transform: rotateX(20deg);
+}
+
+
+.trois-ds {
+    transform-origin: bottom;
+    perspective: 1000px;
+    animation: dsOpeningAnimation 2s ease-out forwards;
+}
+
+.white-top-screen {
+    background: white;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden; /* Masque le défilement horizontal */
+}
+
+/* Scrollbar personnalisée */
+.white-top-screen::-webkit-scrollbar,
+#content::-webkit-scrollbar {
+    width: 20px;
+}
+
+.white-top-screen::-webkit-scrollbar-track,
+#content::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.white-top-screen::-webkit-scrollbar-thumb,
+#content::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+.white-top-screen::-webkit-scrollbar-thumb:hover,
+#content::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+#content {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.trois-ds {
+    min-width: 47%;
+}
+
+/* Carrousel */
+.bcg-white {
+    position: relative;
+    margin: auto;
+    background-color: white;
+    width: 61%;
+    height: 35vh;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card-list .card-item {
+    list-style: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 7vh;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.8s ease;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    min-height: 7vh;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Animation Glowing */
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 10px rgba(53, 53, 236, 0.5), 0 0 1px rgba(53, 53, 236, 0.5), 0 0 3px rgba(53, 53, 236, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(53, 53, 236, 0.5), 0 0 2px rgba(53, 53, 236, 0.5), 0 0 4px rgba(53, 53, 236, 0.5);
+    }
+}
+
+.inline-grid {
+    display: inline-grid;
+}
+
+.swiper-slide-active .card-image {
+    animation: glowing 1.5s infinite alternate;
+    transform: scale(1.2);
+}
+
+/* Flèches de direction */
+.arrow {
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Positionnement spécifique des flèches */
+.arrow.up {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.arrow.left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.arrow.right {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.arrow.down {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.d-pad {
+    display: inline-grid;
+    width: 40%;
+    max-width: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    margin-right: 0.5vw;
+}
+
+/* Boutons A et B */
+.ab-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    max-width: 200px;
+    margin-left: auto;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.2em;
+    
+}
+
+button:active {
+    transform: scale(0.89);
+    transition: 0.1s ease-in-out;
+}
+
+.a {
+    background-color: #4CAF50;
+    margin-left: 2vw;
+}
+
+.b {
+    background-color: #f44336;
+    margin-left: 4vw;
+}
+
+/* Affichage du temps */
+.time-display {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+}
+
+.day-display {
+    position: absolute;
+    top: 9px;
+    text-align: center;
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+}
+
+.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Erreur 404 DS */
+.error-404-ds {
+    background-color: #000080;
+    color: white;
+    text-align: center;
+    font-family: "Press Start 2P", monospace;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.stage-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.stage-buttons {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10%;
+    gap: 20px;
+}
+
+.stage-content {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 0 0 4px #d3d3d3;
+    margin-top: 10px;
+}
+
+
+.report-actions {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.google-docs-container {
+    margin-top: 15px;
+    border: 4px solid #d3d3d3;
+}
+
+
+.error-header {
+    font-size: 24px;
+    color: #FF0000;
+}
+
+.warning-icon {
+    width: 64px;
+    height: 64px;
+    margin: 10px auto;
+    display: block;
+}
+
+.error-message {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.error-footer {
+    font-size: 12px;
+    color: #FFFF00;
+}
+
+
+/* Style pour le Chargement d'app */
+.ds-loading {
+    background-color: #000080;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Press Start 2P", monospace;
+}
+
+.loading-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.loading-bar-container {
+    width: 80%;
+    height: 20px;
+    background: #333;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@keyframes loadingProgress {
+    0% { width: 0%; }
+    15% { width: 20%; }
+    30% { width: 35%; }
+    45% { width: 48%; }
+    60% { width: 65%; }
+    75% { width: 78%; }
+    85% { width: 89%; }
+    95% { width: 96%; }
+    100% { width: 100%; }
+}
+
+.loading-bar {
+    height: 100%;
+    width: 0;
+    background-color: #0078d4;
+    animation: loadingProgress 2s cubic-bezier(0.34, 0.15, 0.73, 0.95) forwards;
+}
+.loading-status {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+
+/* Top screen press A */
+
+.press-a-screen {
+    background-color: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P", monospace;
+    color: white;
+}
+
+.press-a-image {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.press-a-text {
+    color: black;
+    font-size: 18px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Language selector */
+.language-selector {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.language-selector select {
+    padding: 5px;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+    border: 1px solid #666;
+    font-family: "Press Start 2P", monospace;
+    font-size: 0.8em;
+}
+
+.skills {
+    display: flex;
+    max-height: 80px; /* Reduced from 100px */
+    height: 65px; /* Reduced from 100px */
+    overflow-y: hidden;
+}
+
+.skills img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.skills-page {
+    background-color: #000080;
+    height: auto;
+    font-family: "Press Start 2P", monospace;
+    color: white;
+    padding: 20px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    border: 2px solid white;
+    padding: 10px;
+}
+
+.skill-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+
+.skill-name {
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.skill-level {
+    display: flex;
+    text-align: right;
+    justify-content: left;
+    margin-right: 0;
+    margin-left: auto;
+    height: 20px;
+    background: #333;
+    border: 2px solid white;
+    max-width: 17vw;
+    width: 17vw; /* Fixed width for all progress bars */
+}
+
+.skill-progress {
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.skill-progress[data-level="20"] {
+    background-color: #ff7f16;
+    width: 20%;
+}
+
+.skill-progress[data-level="50"] {
+    background-color: #fafa27;
+    width: 50%;
+}
+
+.skill-progress[data-level="60"] {
+    background-color: #eeff30;
+    width: 60%;
+}
+
+.skill-progress[data-level="70"] {
+    background-color: #aefd27;
+    width: 70%;
+}
+
+.skill-progress[data-level="80"] {
+    background-color: #81fd34;
+    width: 80%;
+}
+.skill-progress[data-level="100"] {
+    background-color: #00ff4c;
+    width: 100%;
+}
+
+.floating-image {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+    opacity: 0.6;
+    transition: transform 0.1s linear;
+}
+
+
+.top-screen {
+    transition: transform 0.5s ease; /* Animation fluide lors du changement de taille */
+}
+
+
+/* Animation pour agrandir l'écran */
+@keyframes expandScreen {
+    0% {
+        width: 86%;
+    }
+    80% {
+        width: 160%;
+    }
+    100% {
+        width: 150%; /* Ajuste la valeur en fonction de l'effet souhaité */
+    }
+}
+
+/* Animation pour rétrécir l'écran */
+@keyframes contractScreen {
+    0% {
+        width: 150%;
+    }
+    80% {
+        width: 70%;
+    }
+    100% {
+        width: 86%; /* Ajuste la valeur en fonction de l'effet souhaité */
+    }
+}
+
+.top-screen-expanded {
+    animation: expandScreen 0.5s forwards;
+}
+
+.top-screen-default {
+    animation: contractScreen 0.5s forwards;
+}
+
+
+
+.top-screen-default {
+    transform: scale(1); /* Taille par défaut */
+}
+
+.block {
+    display: flex;
+    width: 100%;
+}
+
+.cgu {
+    display: flex;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exactement 2 colonnes */
+    gap: 20px;
+    padding: 20px;
+    width: 100%; /* Utilise toute la largeur disponible */
+    max-width: 600px; /* Optionnel: limite la largeur maximale mais suffisamment large pour 2 cartes */
+}
+
+.project-card {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%; /* Assure que chaque carte prend toute la largeur de sa colonne */
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 2px 2px 0px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card-full {
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 2px 2px 0px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 1 / -1; /* Cette propriété fait que la carte s'étend sur toutes les colonnes */
+    margin-top: 10px; /* Espace supplémentaire au-dessus de la carte pleine largeur */
+}
+
+
+.project-image {
+    width: 50px;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.project-title {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+.project-description {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+.project-link {
+    font-size: 10px;
+    padding: 5px 10px;
+}
+
+/* Style for popup CGU */
+
+.modal {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Contenu de la popup */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    text-align: left;
+  }
+
+  /* Bouton de fermeture */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }

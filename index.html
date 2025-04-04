@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Nintendo 3DS Style</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Écran supérieur -->
+    <div id="welcomeMessage" data-translate="welcome"></div>
+    <div class="trois-ds">
+        <div class="screen top-screen" id="topScreen">
+            <div class="white-top-screen">
+                <div id="content">
+                    <p>Bienvenue sur mon portfolio interactif.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Écran inférieur avec carrousel intégré -->
+        <div class="screen bottom-screen">
+            <!-- Flèches de direction à gauche -->
+            <div class="d-pad">
+                <button class="arrow up" onclick="navigate('up')">↑</button>
+                <button class="arrow left arrow-left" onclick="navigate('left')"> < </button>
+                <button class="arrow right arrow-right" onclick="navigate('right')">></button>
+                <button class="arrow down" onclick="navigate('down')">↓</button>
+            </div>
+            <!-- Conteneur du carrousel au centre -->
+            <div class="bcg-white">
+                <div class="screen-navbar">
+                    <div id="time" class="time-display"></div>
+                    <div id="day" class="day-display"></div>
+                </div>
+                <div class="container swiper centre lowhight">
+                    <div class="card-wrapper">
+                        <ul class="card-list swiper-wrapper">
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="./cv_ia2.png" alt="" class="card-image">
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="./image/defauts.png" alt="" class="card-image">
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="./image/skills.png" alt="" class="card-image skills">
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="./image/stage.png" alt="" class="card-image">
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="./image/projets.png" alt="" class="card-image">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="language-selector">
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="fr">🇫🇷 Français</option>
+                            <option value="en">🇬🇧 English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Boutons A et B à droite -->
+            <div class="ab-buttons">
+                <button class="button a" onclick="selectAction()">A</button>
+                <button class="button b" onclick="showPressAScreen()">B</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <a class="cgu" href="#" id="openCgu">CGU</a>
+      </div>
+      
+      <!-- Popup Modal CGU -->
+      <div id="cguModal" class="modal">
+        <div class="modal-content">
+          <span class="close" id="closeCgu">&times;</span>
+          <h2>Conditions Générales d'Utilisation</h2>
+          <p>
+            Les présentes Conditions Générales d'Utilisation (CGU) régissent l'utilisation de ce site. En accédant et en naviguant sur ce site, vous acceptez ces conditions sans réserve.
+          </p>
+          <h3>Article 1 : Objet</h3>
+          <p>
+            Ce site a pour objet de fournir une plateforme d'information et de présentation de nos services et projets. Toute utilisation de ce site implique l'acceptation des présentes CGU.
+          </p>
+          <h3>Article 2 : Accès au site</h3>
+          <p>
+            L'accès au site est gratuit et disponible 24/7. Nous nous réservons le droit de modifier, suspendre ou interrompre l'accès au site à tout moment sans préavis.
+          </p>
+          <h3>Article 3 : Propriété intellectuelle</h3>
+          <p>
+            L'ensemble des contenus présents sur ce site (textes, images, logos, etc.) est protégé par les lois relatives à la propriété intellectuelle. Toute reproduction ou représentation totale ou partielle sans autorisation est interdite.
+          </p>
+          <h3>Article 4 : Responsabilités</h3>
+          <p>
+            Nous déclinons toute responsabilité quant aux erreurs, inexactitudes ou omissions dans les contenus du site. L'utilisateur reste responsable de l'utilisation qu'il fait des informations accessibles sur le site.
+          </p>
+          <h3>Article 5 : Données personnelles</h3>
+          <p>
+            Toute donnée personnelle recueillie sur le site est traitée conformément à notre politique de confidentialité. Pour toute question relative à vos données, merci de nous contacter.
+          </p>
+          <h3>Article 6 : Modification des CGU</h3>
+          <p>
+            Nous nous réservons le droit de modifier les présentes CGU à tout moment. Les modifications prendront effet dès leur publication sur le site.
+          </p>
+          <h3>Article 7 : Contact</h3>
+          <p>
+            Pour toute question concernant ces CGU, veuillez nous contacter à l'adresse : 
+            <a href="mailto:nooaaahhhh@proton.me">nooaaahhhh@proton.me</a>.
+          </p>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./style/script.js"></script>
+</body>
+</html>
+
