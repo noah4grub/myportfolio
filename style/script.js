@@ -279,7 +279,7 @@ function updateTopScreenContent(index) {
                             <img src="./image/python.png" class="skill-icon">
                             <span class="skill-name">PYTHON</span>
                             <div class="skill-level">
-                                <div class="skill-progress" data-level="70"></div>
+                                <div class="skill-progress" data-level="80"></div>
                             </div>
                         </div>
                     </div>
@@ -385,7 +385,7 @@ function showStageReport(stageType) {
     const stageContent = document.getElementById('stageContent');
     const reportURLs = {
         sn1: "https://docs.google.com/document/d/1Y_fBHWdvbcvcwQSDwGAhtAt5S4qjaxZDYznedHR4uEM/edit?usp=sharing",
-        sn2: "https://docs.google.com/document/d/votre_id_pour_sn2/edit?usp=sharing"
+        sn2: "https://docs.google.com/document/d/1T5kp0xoeQmgYYONOQHeywCjRaFtiA7VcQycjeUt2-bw/edit?usp=sharing"
     };
     const reportTitles = {
         sn1: "Rapport de Stage SN1",
