@@ -372,6 +372,42 @@ function updateTopScreenContent(index) {
                 canLoadContent = false;
                 break;
 
+            case 5:
+            content.innerHTML = `
+            <div class="projects-container">
+                <div class="project-card-full">
+                <h3 class="project-title">Journal de veille informatique</h3>
+                <p><strong>Période :</strong> 2023 – 2025</p>
+                <p><strong>Étudiant :</strong> Lejolivet Noah</p>
+                <hr>
+                <h4 class="project-subtitle">Objectif</h4>
+                <p>Anticiper les tendances IT et alimenter mes projets avec des infos fiables et récentes.</p>
+                <h4 class="project-subtitle">Source principale</h4>
+                <p><strong>The Wall Street Journal</strong> (rubriques : Technology, Business, Markets, Enterprise)</p>
+                <h4 class="project-subtitle">Preuve de veille</h4>
+                <p> cliquez sur l'image pour accéder à la preuve de veille d'un article de tech </p>
+                <div class="project-image-wrapper" style="text-align:center; margin-top:1rem;">
+                    <a 
+                    href="./wsj-proof-of-subscribtion.png" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    >
+                    <img
+                        src="./wsj-proof-of-subscribtion.png"
+                        alt="Capture d'écran WSJ"
+                        class="project-image-wsj"
+                        style="max-width:100%; height:auto; border:1px solid #888;"
+                    />
+                    </a>
+                </div>
+                </div>
+            </div>
+            `;
+            canLoadContent = false;
+            break;
+
+
+
             default:
                 content.innerHTML = "<p>Bienvenue sur mon portfolio interactif.</p>";
                 canLoadContent = false;
