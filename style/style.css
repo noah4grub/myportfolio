@@ -744,6 +744,11 @@ button:active {
     image-rendering: pixelated;
 }
 
+.project-image-wsj {
+    max-width: 25vw;
+    image-rendering: pixelated;
+}
+
 .project-title {
     font-size: 16px;
     margin: 10px 0 5px;
