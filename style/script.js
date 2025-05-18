@@ -376,30 +376,59 @@ function updateTopScreenContent(index) {
             content.innerHTML = `
             <div class="projects-container">
                 <div class="project-card-full">
-                <h3 class="project-title">Journal de veille informatique</h3>
-                <p><strong>Période :</strong> 2023 – 2025</p>
-                <p><strong>Étudiant :</strong> Lejolivet Noah</p>
-                <hr>
-                <h4 class="project-subtitle">Objectif</h4>
-                <p>Anticiper les tendances IT et alimenter mes projets avec des infos fiables et récentes.</p>
-                <h4 class="project-subtitle">Source principale</h4>
-                <p><strong>The Wall Street Journal</strong> (rubriques : Technology, Business, Markets, Enterprise)</p>
-                <h4 class="project-subtitle">Preuve de veille</h4>
-                <p> cliquez sur l'image pour accéder à la preuve de veille d'un article de tech </p>
-                <div class="project-image-wrapper" style="text-align:center; margin-top:1rem;">
-                    <a 
-                    href="./wsj-proof-of-subscribtion.png" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    >
-                    <img
-                        src="./wsj-proof-of-subscribtion.png"
-                        alt="Capture d'écran WSJ"
-                        class="project-image-wsj"
-                        style="max-width:100%; height:auto; border:1px solid #888;"
-                    />
-                    </a>
-                </div>
+                    <h3 class="project-title">Journal de veille informatique</h3>
+                    <p><strong>Période :</strong> 2023 – 2025</p>
+                    <p><strong>Étudiant :</strong> Lejolivet Noah</p>
+                    <hr>
+
+                    <h4 class="project-subtitle">Objectif</h4>
+                    <p>Anticiper les tendances IT et alimenter mes projets avec des infos fiables et récentes.</p>
+
+                    <h4 class="project-subtitle">Problématique</h4>
+                    <p>Comment les innovations technologiques en informatique ont-elles transformé les services financiers mondiaux entre 2023 et 2025 ?</p>
+
+                    <h4 class="project-subtitle">Sources principales en addition de Wall Street</h4>
+                    – <a href="https://www.jpmorgan.com/insights/markets/indices/indexgpt" target="_blank">JPMorgan - IndexGPT</a><br>
+                    – <a href="https://www.blackrock.com/corporate/insights/blackrock-investment-institute/publications/mega-forces/artificial-intelligence" target="_blank">BlackRock - AI Megatrends</a><br>
+                    – <a href="https://fortune.com/2023/05/26/jpmorgan-indexgpt-a-i-stock-picker" target="_blank">Fortune - IA chez JPMorgan</a><br>
+                    – <a href="https://www.imf.org/en/Blogs/Articles/2023/07/18/crypto-needs-comprehensive-policies-to-protect-economies-and-investors" target="_blank">FMI - Régulation des cryptos</a><br>
+                    – <a href="https://www.weforum.org/stories/2024/05/global-cryptocurrency-regulations-changing/" target="_blank">WEF - Réglementation crypto</a><br>
+                    – <a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/digital-operational-resilience-act-dora" target="_blank">ESMA - DORA</a><br>
+
+                    <h4 class="project-subtitle">Veille par thématiques</h4>
+                    <h5>1. Intelligence Artificielle et Finance Prédictive</h5>
+                    – IndexGPT : assistant IA de JPMorgan pour les investissements.<br>
+                    – BlackRock prévoit plus de 700 Mds $ d'investissements IA/an d'ici 2030.<br>
+                    – Wall Street utilise de plus en plus l’IA pour les opérations internes.<br>
+
+                    <h2>2. Blockchain, Cryptoactifs et Régulation</h2>
+                    – Le FMI appelle à une réglementation mondiale des cryptos.<br>
+                    – L’Union européenne met en place MiCA pour encadrer les actifs numériques (2023).<br>
+
+                    <h2>3. Cybersécurité et Résilience Opérationnelle</h2>
+                    – Diminution des ransomwares en 2023 selon Mandiant.<br>
+                    – Le règlement DORA est entré en vigueur en janvier 2025 en Europe pour renforcer la sécurité numérique des banques.<br>
+
+                    <h2>4. Open Banking et Automatisation</h2>
+                    – Utilisation croissante des API dans les services financiers grâce à l’open banking.<br>
+                    – Interopérabilité et innovation permises par les plateformes ouvertes.<br>
+
+                    <h4 class="project-subtitle">Preuve de veille</h4>
+                    <p>Cliquez sur l'image pour accéder à la preuve de veille d'un article de tech :</p>
+                    <div class="project-image-wrapper" style="text-align:center; margin-top:1rem;">
+                        <a 
+                            href="./wsj-proof-of-subscribtion.png" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="./wsj-proof-of-subscribtion.png"
+                                alt="Capture d'écran WSJ"
+                                class="project-image-wsj"
+                                style="max-width:100%; height:auto; border:1px solid #888;"
+                            />
+                        </a>
+                    </div>
                 </div>
             </div>
             `;
