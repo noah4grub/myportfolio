@@ -11,6 +11,20 @@
     font-family: "Press Start 2P", monospace;
 }
 
+  .cv-vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+  }
+
+  .cv-pdf {
+      width: 80%;
+      height: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+  }
 
 .nintendo-logo {
     font-size: 2em;
