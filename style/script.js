@@ -435,6 +435,19 @@ function updateTopScreenContent(index) {
             canLoadContent = false;
             break;
 
+            case 6:
+                content.innerHTML = `
+                    <div class="cv-vertical">
+                        <iframe src="./image/grille.pdf" class="cv-pdf" frameborder="0"></iframe>
+                        <iframe src="./image/stage1.pdf" class="cv-pdf" frameborder="0"></iframe>
+                        <iframe src="./image/stage2.pdf" class="cv-pdf" frameborder="0"></iframe>
+                    </div>
+                `;
+                canLoadContent = false;
+                break;
+                
+
+
 
 
             default:
